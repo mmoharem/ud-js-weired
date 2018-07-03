@@ -1,0 +1,75 @@
+Type and js:
+A) Dynamic Typing: You dont tell the engine what type of data a variable holds, It figure it out while your code is runing.
+    Variables can hold different types of values because its all figured out during execution.
+
+    In other languages like (c# and java) they are static typing: which when the variable is declared its type must be declared also.
+     Ex: bool isNew = 'hello;
+    
+    But js is Dynamic Typing.
+
+B) Primitives Types:
+    A type of data that represents a single value.
+    Somthing that is not and object, because object is a collection of name value pairs.
+  The types is:
+    1- Undifined: present lack of existence (you shouldnt set a variable to undifined).
+    2- Null: also present lack of existence (you can set a variable to null).
+    3- Boolean: true or false.
+    4- Numbers: nubers including decimals, not like other languges containing (integers and decimals),
+    5- String: A sequence of characters (both '' and "" can be used)
+    Symbol : Used only in ES6.
+
+
+///////////////////////////////////////////////////////////////////
+
+C) Operators: 
+A special function that is syntactically (written) differently.
+Generally, operators take two parameters and return one result.
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+D) Operators Precedence and associativity.
+
+    Operator Presidence: Which operator function gets called first
+        Function are called in order of precedence (Highter precedence wins)
+
+    Associativity: What order operator function get called in, left-to-right or right-to-left.
+        When function have the same precedence
+
+
+        Check the ------> 1-Operator-Precedence-In-Javascript.pdf
+
+    Ex:  Check the -------> script.js
+
+    So: the Operator with highter Precedence will run first in the direction of this operater associativity, then the
+        the operator with second highter precedence will run in its associative direction and so on,....
+
+/////////////////////////////////////////////////////////////////////
+
+E) Coercion: Converting a value from one type to another.
+    This happens quite often in javascript because its dynamicly typed.
+
+    Check the -------> script.js
+
+///////////////////////////////////////////////////////////////////////
+
+F) comparison Operators:
+
+    Check the -------> script.js
+
+    Check the -------> 2-Equalty-Comparison-And-Sameness.pdf
+
+
+/////////////////////////////////////////////////////////////////////////
+
+g) Existance and Booleans:
+
+/////////////////////////////////////////////////////////////////////
+
+H) Default Value:
+
+    Check the -------> script.js
+
+/////////////////////////////////////////
+
+I) Framworks:

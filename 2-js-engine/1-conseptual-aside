@@ -1,0 +1,181 @@
+A) Conceptual Aside 1
+
+1- Suntax Parsers
+
+2- Execution contexts
+
+3- Lexical Environments:
+    where somthing writen physicaly in your code
+
+
+///////////////////////////////////////////////////////////
+
+B) Conceptual Aside 2 (Name, Value pairs, Objects)
+
+1- Name/value pairs
+    The name may be defined more than once, but only can have one value in any given context.
+    That value may be more name/ values pairs.
+    ex: Adress = '100 main st.' // name is (Address) and its value is (100 mani st.)
+
+2- Objects:
+    Is a collection of name value pairs.
+    We can have name value pairs inside name value pair inside,...... and so on.
+    Ex:
+        Address:
+            {
+                Street: 'Main',
+                Number: 100
+                Apartment:
+                {
+                    Floor: 3,
+                    Number: 301
+                }
+            }
+
+/////////////////////////////////////////////////////////////
+C) The global enviroment and the global object
+    - When ever code is run it run inside the execution context
+    - The base execution context is the global execution context
+    - The globale execution context create two things
+        1- Global Objects.
+        2- This, Key word.
+    goto broweser and open the console
+    type (this) you will get the window object
+
+    - Global: Mean Not inside a function
+
+    continue -----> with script.js
+
+    //outer level: in the global enviroment ther is no outer level as the global enviroment is the outer side
+
+////////////////////////////////////////////////////////
+
+D) The execution context: Creation and Hoisting
+
+    continue -----> with script.js
+
+//////////////////////////////////////////
+
+E) Javascript and Undefined:
+    the undifine is a special value in js
+    it is not equl not defined which is not exist to have value
+
+////////////////////////////////////////
+
+F) The execution context: Code Execution phase
+    which is runing code line by line.
+
+    continue -----> with script.js
+
+////////////////////////////////////////////////////////////////
+
+G) Single threaded: syncronous execution
+    Single threaded Mean: that one comand will be executed at the time
+    Syncronous executed Mean: one line at a time in the order they appears
+
+////////////////////////////////////////////////////////////////////////////
+
+H) Function Invocation and The execution stack
+    Invocation Mean: Running a function, By using paranthis ()
+
+    Ex (1):
+        function b() {
+        }
+
+        function a() {
+            b();
+        }
+
+        a();
+
+    so how this code run: it will run as stack
+
+    3- b() Executed context (create and execute)
+    2- a() Executed context (create and execute) ------> when reach b() create stack on tob
+    1- globale execution context (created and the code is excuted)---> when reached a() creat stack on top
+
+    Ex (2):
+        function a() {
+            b();
+            var c;
+        }
+
+        function b() {
+            var d;
+        }
+
+        a();
+        var d;
+
+    So How this run:
+
+    6- at the stack of globale exec contex the exectution will run (var d;)  
+    5- at stack a() the execution context going to func a() to run the second line (var d;)---> after that the 
+            stack for a() will poped-of
+    4- third-stack b() Executed context (create and execute) -----> run  (var d;) 
+            ----> after the execution context finished func b() it will pop-of stack b() going back to finish a(), 
+    3- second-stake a() Executed context (create and execute) ------> when reach b() create stack on tob
+    2- execution will invoke a() and (var d;) will not run yet beacause js is syncrinis one line by line  ;   
+    1- first stack globale execution context (created and the code is excuted)---> when reached a() creat stack on top
+
+    // So every time the function is called the execution context is created for that function and, so the (this) 
+        variable is created for that function, the variables witin it is setup during the creation phase and the
+        code is excuted line by line, but every time the function is invoked eaven it is invoking its self a new exectution
+        context will created and put it on top of the stack then it will poped of after the function is finishes
+
+////////////////////////////////////////////////////////////////////////////////////
+
+I) Functions context and variable environments:
+    variable environment: where the variables live, and how they related to each other in memory
+
+    Ex (1):
+        function b() {
+            var myVar;
+        }
+
+        function a() {
+            var myVar = 2;
+            b();
+        }
+
+        var myVar = 1;
+        a();
+
+
+
+        continue -----> with script.js
+
+///////////////////////////////////////////////////////////////////////////////
+
+j) The Scope Chain:
+    //Scope: where a variable is available in your code.
+        and if its truly the same variable, or a new copy.
+
+        continue -----> with script.js
+        
+/////////////////////////////////////////////////////////////////////////
+
+
+k) Scope, ES6 and let:
+    let: allows the js engine to use what is called (block scoping)
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+l) What about asynchronous callbacks ?
+    //asynchronous: Mean that more than one in the same time
+
+    To answer that question lets think about the (js engine) inside the (browser environment),
+        under the browser ther other element and engines that runnig a code like (rendering engine, http request, ),
+        which the js engine have hokes to all of that;
+    
+    So the at the browser the js engine is running syncronus but all of the engine work to gether async will js engine still runing code line by line.
+
+    while the js engine runnig the exectution stack ther is other running list called (Event Queue) for the event listner to run.
+        however the js listner will not procceses this events till all the execution stacke will finished
+
+        
+        continue -----> with script.js
+
+///////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,208 @@
+// Object and Function
+
+A) Objects and the Dot:
+    The objects is a collection of names and values
+
+    Lets how the objects lives in computer memory
+    So abject may contains:
+        1- Primitives (Property)
+        2- Object (Property)
+        3- Functin (Method)
+
+        Check ------> script.js
+
+/////////////////////////////////////////////////
+
+B) Object Literal {}:
+    You can use ({}) insted of (new Object)
+
+    Check ------> script.js
+
+/////////////////////////////////////////////
+
+C) Framwork: Facking Namespaces:
+    Namespace: Is a container for variables and functions.
+        typically to keep variables and functions with the same separate.
+
+    In js there is no namespace because the flexability of objects in js.
+
+        Check ------> script.js
+
+/////////////////////////////////////////////////////
+
+D) Json and Object Literal: (Json (Javascript Object Notation))
+
+        Check ------> script.js
+
+/////////////////////////////////////////////////////////////
+
+E) Function are Objects: First class functions)
+    First class Functions: Using Function as an Object. 
+
+        1- Function can do every thig other types do.
+            Assign them to variables, pass them around, create them on the fly.
+        2- you can attch to them properties and object.
+        3- They can be anomynous, withot name.
+        4- Code: the code written is not the function but it saved in specil property in the function
+
+        Check ------> script.js
+
+/////////////////////////////////////////
+
+F) Function Statement and Function Expressions:
+    Epression: Is a unit of code that results in a value, it dont have to save a vlue.
+
+
+        Check ------> script.js
+
+////////////////////////////////////////////////////
+
+G) By Value vs By Refrence:
+    
+    1-Primitives:
+
+    Ex: by value:
+
+    var a; 
+    //saved at the memory at specific location address
+
+    var b = a; 
+    //b saved in memory with new location address, and a copy of premitive (a) pointed to it orignal address 
+
+    (if a = 3) then (b will be = to 3) by-value:
+    //Which is (b) is coping the value of a.
+
+    2-Objects
+
+    Ex: by Refrence
+
+    var a = Object;
+    // a will saved to the memory at specific location address
+
+    var b = a;
+    // b will saved to the memory with the same a location pointed.
+    // no new copy of object is created for b as in Primitives
+
+    Check ------> script.js
+
+    ///////////////////////////////////////////////////////////////////////
+
+    Mutate: To change somthing
+
+    /////////////////////////////////////////////////////////////////
+
+H) Object, Functions and (this):
+    (this) pointing changes due to where it is invoked
+
+
+    Check ------> script.js
+
+///////////////////////////////////////////////////////////////////////////
+
+I) Arrays - collection of anythings:
+
+   Check ------> script.js
+
+/////////////////////////////////////////
+
+J) Argument and Spread:
+    Arguments: The parameters you pass to a function.
+    Js gives you a keyword of the name which contains them all.
+
+    When the exection context is created for a (function) it creates
+    1- Variable environment
+    2- (this) keyword
+    3- Outer environment
+    4- (Arguments) keyword: 
+        which conlain a list of all (var
+        
+    Note: in js you can invoke function without there parameters, this is because hoesting all of them set to undefined in the memory. 
+
+        Check ------> script.js
+
+///////////////////////////////////////////////////////////
+
+K) Framwork Aside: Function Overloading:
+
+    Check ------> script.js
+
+/////////////////////////////////////////////////////
+
+L) Syntax Parsers, Semi coloc(;) and whitespace:
+    The parser runing the code carcter by carcter using a set of rules setting a valid senatax,
+     if it reached wrong carter is run in error, so it calle
+
+
+            Not continued
+
+////////////////////////////////////////////////////
+
+M) Immeditely Invoked Function (IIF):
+
+    Check ------> script.js
+
+////////////////////////////////////////////////////////////
+
+H) Framwork Aside: IIFE and safe code:
+
+    Check ------> script.js
+
+///////////////////////////////////////////////////////////////////////
+
+N) Understanding Closures
+    1- Part-1:
+    //clousr is that the js engine close-in the execution context to its outer variables that it has any refrence even his context has goen.
+    
+            Check ------> script.js
+
+    2- Part-2:
+
+            Check ------> script.js
+
+///////////////////////////////////////////////////////////////////////////
+
+O) Framwork Aside: Function Factories:
+
+        Check ------> script.js
+
+///////////////////////////////////////////////////////////////////
+
+P) Closures and Callbacks:
+    We always using function expresio Closures in Js without knowing that
+    Callback Function: A function you give to another function, To be run when the other function is finished
+        So the function you call (invoke), By calling the function you gave it when finishes.
+
+    Ex:
+        1- Jquery
+        2- setTimeout
+
+        Check ------> script.js
+
+
+/////////////////////////////////////////////////////////////////////
+
+Q) Call(), Apply() and Bind():
+    They allow us to controll the (this) keyword.
+
+
+        Check ------> script.js
+
+    1-Bind: The (.bind) create a copy of what ever a function it call, and then what ever method you pass to it 
+    2-call:
+    3-apply:
+    x1-Function Borrowin:
+    x2-Functin Carrying: Creating a copy of a fn but with some preset parameters.
+        Very useful in mathematical situation.
+
+/////////////////////////////////////////////////////////////////////////////////
+
+R) Functional Programing:
+
+        Check ------> script.js
+
+    Online Self Education:
+        1- check underscorejs.org
+        2- check lodash.com
+
+        Check ------> script.js
+
