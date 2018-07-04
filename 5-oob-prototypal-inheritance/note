@@ -1,0 +1,57 @@
+A)Classical vs Prototypal Inhertance
+    
+    Inhertance: one object gets access to the properties and methodsof other object.
+
+    1-Classical Inhertance: its verbose.
+        - friend
+        - protected
+        - private
+        - interface
+
+    2- Prototypal Inhertance: Its simple
+        - flexible
+        - extensible
+        - easy to understand
+
+    Scope Chain: Lokking were to have access to a variable
+    Prototype Chain: where to have a ccess to properties and method among a sequance of objects that are connected via this prototype properties
+
+    ex:  ----Prototype Chain ------>
+        obj --> proto{} --> proto{}
+            Prop1    Prop2       Prop3
+
+        obj.Prop1
+        obj.Prop2
+        obj.Prop3    ///instead of obj.proto.proto.Prop3
+
+        if we have obj2 // Obect can share all the protype
+        obj2.Prop2 = obj.Prop2
+
+        Check------>script.js
+
+//////////////////////////////////////////////////////////////////////
+
+B) Everything is an Object (or a Primitive)
+
+/////////////////////////////////////////////////////////////////
+
+C) Reflection and Exyend:
+    Reflection: An object can look at itself, listing and changing its properties and method.
+
+    Check------>script.js
+
+////////////////////////////////////////////////////////////////////////
+
+D) fn constructor and (new) keyword:
+    Function Constructors: A normal fn that is used to construct objects.
+        The (this) variable points a new empty object, and that object is returned from the function automaticlly.
+
+    Check------>script.js
+
+/////////////////////////////////////////////////////////////////
+
+E) fn constructor and .Prototype:
+    Any function in js has a hidden prototype property, used only by (new) operator.
+
+    The prototype property on a function is not a prototype of the function, Its a prototypeof the objects created
+    if we use a function as a function constructor
